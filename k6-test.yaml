@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: k6-tests
+  name: k6-tests
+  namespace: stephen
+spec:
+  containers:
+  - image: ennisstephen/k6-tests:v24
+    imagePullPolicy: IfNotPresent
+    name: k6-tests
